@@ -1,16 +1,16 @@
 # Engenharia Reversa e Análise de Hardware: Intelbras W6-1500
 
-## 📋 Visão Geral
+##  Visão Geral
 Este projeto documenta a exploração de hardware do roteador **Intelbras W6-1500**. O objetivo foi identificar portas de depuração física (UART) na PCB, estabelecer comunicação serial e analisar o processo de boot do firmware.
 
-## 🧰 Ferramentas Utilizadas
+##  Ferramentas Utilizadas
 * **Hardware Alvo:** Roteador Intelbras W6-1500
 * **Interface:** Adaptador USB-Serial (TTL) baseado no chip **CH340**
 * **Multímetro:** Para identificação de pinagem (GND e VCC)
 * **Software:** Linux (Pop!_OS), `screen` para comunicação serial
 * **Conectores:** Jumpers macho-fêmea e solda
 
-## ⚙️ Metodologia
+##  Metodologia
 
 ### 1. Teardown (Desmontagem)
 O dispositivo foi aberto para expor a PCB (Placa de Circuito Impresso). Foi localizada uma interface de 4 pinos não povoados (pads), típica de conexões UART em roteadores baseados em arquitetura MIPS ou ARM.
@@ -37,7 +37,7 @@ Ao ligar o roteador, a comunicação foi estabelecida com sucesso. Foi possível
 <img width="1024" height="576" alt="image" src="https://github.com/user-attachments/assets/06c51cd0-442d-48fc-829a-be61da1aff06" />
 
 
-## 🚧 Desafios e Próximos Passos
+##  Desafios e Próximos Passos
 O acesso direto ao shell de root foi interrompido após o boot completo. O sistema não oferece um prompt de login direto via serial ou o shell está protegido.
 
 **Próximos passos planejados:**
@@ -45,5 +45,5 @@ O acesso direto ao shell de root foi interrompido após o boot completo. O siste
 2.  Analisar o dump do firmware para procurar credenciais hardcoded.
 3.  Tentar ataques de **Fault Injection** (Glitching) se o U-Boot estiver bloqueado.
 
-## ⚠️ Disclaimer
+##  Disclaimer
 Este projeto foi realizado em equipamento próprio para fins de estudo em cibersegurança e hardware hacking.
